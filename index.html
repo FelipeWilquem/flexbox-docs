@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox - Documentação</title>
+    <link rel="stylesheet" href="./style.css">  <!--Este éo link do css para estilizar 
+                                                     sempre colocar no head nunca esquecer do-------(  ./  )--------no style.css -->
+</head>
+<body>
+    <h1>Flexbox</h1>
+    <h2>Documentação</h2>
+    <h3>display: flex</h3>
+
+    <!-- Abreviação (p.descricao-propriedade)  cria uma classe no paragrafo-->
+    <p class="descricao-propriedade">
+    A propiedade display: flex deve ser a primeira a ser declarada no css. A partir 
+    dela é que o CSS vai entender que precisa estilizar o conteudo do conteiner com a 
+    caixa flexivel (Flexbox) .
+</p>
+
+<p>Exemplo:</p>
+
+<!-- abreviaçoes Emmet: 
+div.container  
+div.contido 
+div.container
+-->
+
+<div class="container display-flex"> <!-- antes essa DIV não tinha o display- flex 
+    (escrevi para adicionar a estilização do css) -->
+<div class="contido"></div>
+<div class="contido"></div>
+<div class="contido"></div>
+<div class="contido"></div>
+<div class="contido"></div>
+</div>
+
+<!-- (codigo dessa bagaca a baixo)table>(tr>th.propriedade+th.valor)+tr*3>td.propriedade+td.valor -->
+<table>
+    <caption>Valores Padrão das propriedades do FlexBox</caption>
+    <tr>
+        <th class="propriedade">propriedade</th>
+        <th class="valor">valor</th>
+    </tr>
+    <tr>
+        <td class="propriedade">flex-direction</td>
+        <td class="valor">row</td>
+    </tr>
+    <tr>
+        <td class="propriedade">justify-content</td>
+        <td class="valor">flex-start</td>
+    </tr>
+    <tr>
+        <td class="propriedade">align-content</td>
+        <td class="valor">flex-start</td>
+    </tr>
+</table>
+
+<h2>Flex-Direction</h2>
+
+<p class="Flex-Direction"></p>
+A propriedade flex-direction permite alterar a direção na qual os 
+elementos flex serão exibidos ao longo do eixo principal.
+Definindo a propriedade flex-direction como row-reverse (linha reversa),
+ainda teremos os elementos dispostos em uma linha, entretanto, as linhas inicial e final serão trocadas.
+<p>exemplo</p>
+
+<div class="container display-flex "> 
+    <div class="contido"></div>
+    <div class="contido"></div>
+    <div class="contido"></div>
+    <div class="contido"></div>
+    <div class="contido"></div>
+   </div>
+
+
+
+<h3>Justify-Content:</h3>
+
+<p class= "descricao-propriedade">
+A propriedade justify-content pode ser usada para justificar o conteudo
+do elemento conteiner em seu eixo primario, ou seja, eixo x (row,
+row -reverse) ou eixo y (column, column-reverse)</p>
+<p>exemplo</p>
+
+<h4>Center</h4>
+<p class="descricao-propriedade">
+o valor "center vai alinhar o conteudo 
+ao centro do eixo primario."
+</p>
+
+<p class="exemplo"></p>
+<div class="container display-flex justify-content-center"> 
+ <div class="contido"></div>
+ <div class="contido"></div>
+ <div class="contido"></div>
+ <div class="contido"></div>
+ <div class="contido"></div>
+</div>
+
+
+
+
+</body>
+</html>
