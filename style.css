@@ -1,4 +1,4 @@
-/* (Mini) reset do css para resetar as propriedades mais comuns
+/* /* (Mini) reset do css para resetar as propriedades mais comuns
 que são aplicadas pelo navegador, a fim de eliminar possiveis 
 imcompatibilidades entre navegadores...
 *{
@@ -8,7 +8,7 @@ imcompatibilidades entre navegadores...
 
 
 */
-
+/* 
 *{
 margin: 0;
 padding: 0;
@@ -16,95 +16,427 @@ box-sizing: border-box;
 font-size: initial;
 font-weight: initial;
 text-align: initial;
-}
+} */
 
 /* a partir daqui vai surgir meus estilos definidos para a pagina de documentação */
 
-bodyv{
+/* bodyv{
     width:90%;
     margin: auto;
+} */ 
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: initial;
+    font-weight: initial;
+    text-align: initial;
+}
+
+body{
+    width: 90%;
+    margin: auto;
+    background-color: rgb(222, 233, 225);
 }
 
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: Arial, Helvetica, sans-serif;
-    margin-bottom: 10px;
+
+
+/* exemplo 1 container vazio */
+.exemplo1{
+    border: 5px solid rgba(0, 15, 2, 0.808);
+    width: 550px;
+    height: 150px;
+    background-color: rgb(119, 12, 105);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: fantasy;
+    border-radius: 30px;
+    padding: 5px;
+    border-style: ridge;
+    font-weight: 200px
+}
+
+
+
+
+
+/* Container com os itens */
+.container{
+    border: 5px solid rgb(0, 15, 2, 0.808);
+    width: 200px;
+    height: 640px;
+    background-color: rgb(119, 12, 105);
+    border-style: ridge;
+    border-radius: 20px;
+    padding: 5px;
+    
 
 }
 
-h1 {
-    font-size: 32pt;
+.container_display_flex{
+    border: 5px solid rgb(0, 15, 2, 0.808);
+    width: 640px;
+    height: 300px;
+    background-color: rgb(119, 12, 105);
+    border-style: ridge;
+    border-radius: 20px;
+    padding: 5px;
+    display: flex;
+
+    
 }
 
-h2 {
-    font-size: 26pt;
-    margin-top: 10px;
+/* flex-direction */
+.flex_direction_row-reverse{
+    border: 5px solid rgb(0, 15, 2, 0.808);
+    width: 640px;
+    height: 200px;
+    background-color: rgb(119, 12, 105);
+    border-style: ridge;
+    border-radius: 20px;
+    padding: 5px;
+    display: flex;
+    flex-direction:  row-reverse;
+
+
+}
+
+.flex_direction_row{
+    border: 5px solid rgb(0, 15, 2, 0.808);
+    width: 640px;
+    height: 200px;
+    background-color: rgb(119, 12, 105);
+    border-style: ridge;
+    border-radius: 20px;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+
+
 }
 
 
-h3 {
-    font-size: 32pt;
+
+.flex_direction_colum_reverse{
+    border: 5px solid rgb(0, 15, 2, 0.808);
+    width: 200px;
+    height: 640px;
+    background-color: rgb(119, 12, 105);
+    border-style: ridge;
+    border-radius: 20px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.flex_direction_colum{
+    border: 5px solid rgb(0, 15, 2, 0.808);
+    width: 200px;
+    height: 640px;
+    background-color: rgb(119, 12, 105);
+    border-style: ridge;
+    border-radius: 20px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+}  
+
+
+.justify_content-flex-start{
+    border: 5px solid rgb(0, 15, 2, 0.808);
+    width: 640px;
+    height: 200px;
+    background-color: rgb(119, 12, 105);
+    border-style: ridge;
+    border-radius: 20px;
+    padding: 5px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.justify_content-flex-end{
+    border: 5px solid rgb(0, 15, 2, 0.808);
+    width: 640px;
+    height: 200px;
+    background-color: rgb(119, 12, 105);
+    border-style: ridge;
+    border-radius: 20px;
+    padding: 5px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.justify_content-center{
+    border: 5px solid rgb(0, 15, 2, 0.808);
+    width: 640px;
+    height: 200px;
+    background-color: rgb(119, 12, 105);
+    border-style: ridge;
+    border-radius: 20px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.justify_content-space-between{
+    border: 5px solid rgb(0, 15, 2, 0.808);
+    width: 640px;
+    height: 200px;
+    background-color: rgb(119, 12, 105);
+    border-style: ridge;
+    border-radius: 20px;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between
+
+}
+
+.justify_content-space-around {
+    border: 5px solid rgb(0, 15, 2, 0.808);
+    width: 640px;
+    height: 200px;
+    background-color: rgb(119, 12, 105);
+    border-style: ridge;
+    border-radius: 20px;
+    padding: 5px;
+    display: flex;
+    justify-content: space-around
+
+}
+
+.justify_content-space-evenly{
+    border: 5px solid rgb(0, 15, 2, 0.8083);
+    width: 640px;
+    height: 200px;
+    background-color: rgb(119, 12, 105);
+    border-style: ridge;
+    border-radius: 20px;
+    padding: 5px;
+    display: flex;
+    justify-content: space-evenly
+}
+
+.align-items{
+    border: 5px solid rgb(0, 15, 2, 0.808);
+    width: 540px;
+    height: 400px;
+    background-color: rgb(119, 12, 105);
+    border-style: ridge;
+    border-radius: 20px;
+    padding: 5px;
+    display: flex;
+    align-items: stretch;
+
+}
+
+
+.align-items-start{
+    border: 5px solid rgb(0, 15, 2, 0.808);
+    width: 540px;
+    height: 300px;
+    background-color: rgb(119, 12, 105);
+    border-style: ridge;
+    border-radius: 20px;
+    padding: 5px;
+    display: flex;
+    align-items:flex-start ;
+}
+
+
+.align-items-end{
+    border: 5px solid rgb(0, 15, 2, 0.808);
+    width: 540px;
+    height: 300px;
+    background-color: rgb(119, 12, 105);
+    border-style: ridge;
+    border-radius: 20px;
+    padding: 5px;
+    display: flex;
+    align-items: end ;
+}
+
+.align-items-center{
+    border: 5px solid rgb(0, 15, 2, 0.808);
+    width: 540px;
+    height: 300px;
+    background-color: rgb(119, 12, 105);
+    border-style: ridge;
+    border-radius: 20px;
+    padding: 5px;
+    display: flex;
+    align-items: center ;
+
+}
+
+.align-items-baseline{
+    border: 5px solid rgb(0, 15, 2, 0.808);
+    width: 540px;
+    height: 300px;
+    background-color: rgb(119, 12, 105);
+    border-style: ridge;
+    border-radius: 20px;
+    padding: 5px;
+    display: flex;
+    align-items: baseline ;
+
+}
+
+
+
+
+.flex-wrap_nowrap{
+    border: 5px solid rgb(0, 15, 2, 0.808);
+    width: 440px;
+    height: 300px;
+    background-color: rgb(119, 12, 105);
+    border-style: ridge;
+    border-radius: 20px;
+    padding: 5px;
+    display: flex;
+    flex-wrap:nowrap;
+}
+
+
+.flex-wrap{
+    border: 5px solid rgb(0, 15, 2, 0.808);
+    width: 440px;
+    height: 300px;
+    background-color: rgb(119, 12, 105);
+    border-style: ridge;
+    border-radius: 20px;
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.flex-wrap_reverse{
+    border: 5px solid rgb(0, 15, 2, 0.808);
+    width: 440px;
+    height: 300px;
+    background-color: rgb(119, 12, 105);
+    border-style: ridge;
+    border-radius: 20px;
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap-reverse;
+}
+.flex-flow{
+    border: 5px solid rgb(0, 15, 2, 0.808);
+    width: 640px;
+    height: 300px;
+    background-color: rgb(119, 12, 105);
+    border-style: ridge;
+    border-radius: 20px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+  flex-wrap: wrap;
+}
+
+/* exemplo classe  lixeiras */
+.exemplo{
+    border: 3px solid rgb(34, 34, 63);
+    width: 140px;
+    height: 140px; ;
+    border-style:ridge;
+    border-radius: 20px;
+    padding: 5px;
+    background-color: rgb(248, 135, 6);
+    
+    
+
+}
+
+.exemplo2{
+    border: 3px solid rgb(34, 34, 63);
+    width: 140px;
+    border-style:ridge;
+    border-radius: 20px;
+    padding: 5px;
+    background-color: rgb(248, 135, 6);
+
+
+}
+.exemplo3{
+    border: 3px solid rgb(34, 34, 63);
+    width: 140px;
+    height: 140px; ;
+    border-style:ridge;
+    border-radius: 20px;
+    padding: 5px;
+    background-color: rgb(248, 135, 6);
+
+
+}
+
+button{
+  background-color:rgb(119, 12, 105); 
+  border: 5px solid black;
+  padding: 5px 10px;
+  border-style:ridge;
+  border-radius: 10px;
+  text-decoration
+}
+ 
+u{
+    text-decoration: none;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: black; 
+   padding: 20px;
+   font-size: 2.0em;
+}
+    
+a{
+    text-decoration: none;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: black; 
+   padding: 20px;
+   font-size: 1.3em;
+   
+}
+
+div{
+     text-decoration: none;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: black; 
+   
+   font-size: 1.3em;
+}
+
+
+
+p {
+    font-size: 15pt;
+    line-height: 1,5;
+    margin-left: 20px;
+    text-align: justify ;
+    font-family:  monospace
+}
+
+
+h1,h2,h3{
+    font-family: Arial, Helvetica, sans-serif ;
+    font-size:32pt ;
+
 }
 
 
 h4 {
-    font-size: 32pt;
-
-}
-
-p, table {
-    margin: 20px 0;
-
-}
-
-p {
-    line-height: 1.5;
-    font-size: 16pt;
-    margin-left: 20px;
-    text-align: justify;
-}
-
-td, th {
-    font-size: 16pt;
-}
-
-tr:nth-child(odd){
-
-    background-color: dimgray;
-}
-h5 {
+    font-family: 'Times New Roman', Times, serif;
     font-size: 32pt;
 }
 
 
-h6 {
-    font-size: 32pt;
-}
-
-
-.container {
-    height: 300px;
-    background-color: antiquewhite;
-    border: 5px solid #ff0000;
-    
-}
-
-
-.contido {
-    width: 100px;
-    height: 100px;
-    background-color: aqua;
-    border: 5px solid #00f;
-
-}
-
-.display-flex {
-    display: flex;
-}
 
 
 
-.justify-content-center{
-    justify-content: center;
-}
+/* h1{
 
+    mix-blend-mode: multiply;
+    background-image: url(https://www.tammiranda.com.br/imagens/informacoes/aluguel-container-maritimo-01.jpg);
+    mix-blend-mode: multiply;
+
+} */

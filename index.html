@@ -1,107 +1,258 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FlexBox - Documentação</title>
-    <link rel="stylesheet" href="./style.css">  <!--Este éo link do css para estilizar 
-                                                     sempre colocar no head nunca esquecer do-------(  ./  )--------no style.css -->
+    <title>flexbox</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
-<body>
-    <h1>Flexbox</h1>
-    <h2>Documentação</h2>
-    <h3>display: flex</h3>
+<body id="topo"> 
+   <article>
+        <button><a href="#displayflex",>Display Flex</a> </button>
+        <button><a href="#flexdirection">Flex Direction</a></button>
+        <button><a href="#justcontent">Just Content</a></button>
+        <button><a href="#Alignitems">Align Items</a></button>
+        <button><a href="#flexwrap">Flex Wrap</a></button>
+        <button><a href="#flexflow">Flex Flow</a></button>
+   </article>
+   <br>
+<h1>Flexbox</h1>
+<br>
+<P>O Flexbox (Caixa flexivel ) é um modelo de layout que permite que os elementos dentro de um contêiner sejam organizados em uma única dimensão, seja uma linha ou uma coluna.</P>
+<br>
+<p>Exemplo:</p> 
+<p>O   container, é uma caixa vazia que ira receber itens para armazenar.</p> 
+<p> A imagem abaixo representa  container, classificado como (Elemento Pai) .</p>
 
-    <!-- Abreviação (p.descricao-propriedade)  cria uma classe no paragrafo-->
-    <p class="descricao-propriedade">
-    A propiedade display: flex deve ser a primeira a ser declarada no css. A partir 
-    dela é que o CSS vai entender que precisa estilizar o conteudo do conteiner com a 
-    caixa flexivel (Flexbox) .
-</p>
 
-<p>Exemplo:</p>
+<div class="exemplo1" style="color: rgb(248, 135, 6);"><U> ELEMENTO PAI</U></div>
+<br>
 
-<!-- abreviaçoes Emmet: 
-div.container  
-div.contido 
-div.container
--->
+<p>As Figuras abaixo são itens adicionados dentro do container, esses itens são declarados como elementos filhos (Flex itens).</p>
+<p>Por padrão esses elementos quando não manipulados são alinhados um embaixo do outro no efeito coluna.</p>
+<p>Para que esses elemntos possam receber uma estilização utilizamos o recurso DISPLAY FLEX. </p>
+<br>
 
-<div class="container display-flex"> <!-- antes essa DIV não tinha o display- flex 
-    (escrevi para adicionar a estilização do css) -->
-<div class="contido"></div>
-<div class="contido"></div>
-<div class="contido"></div>
-<div class="contido"></div>
-<div class="contido"></div>
+     <div class="container">
+        <div class="exemplo">1</div>
+        <div class="exemplo">2</div>
+        <div class="exemplo">3</div>
+        <div class="exemplo">4</div>
+    </div> 
+   <br>
+
+   
+   <H2 id="displayflex" >DISPLAY FLEX</H2>
+    <br>
+    <p > A função DISPLAY: FLEX, quando aplicada dentro do container, torna esse elemento  um flex container (Caixa Flexivel). </p> 
+        <p>Ao aplicarmos essa propriedade no elemto pai podemos manipular todos os elementos filhos desse flex container.</p>
+        <p>Por padrão quando aplicamos display flex para um elemento, todos os filhos (Flex itens) deixam de ficar  em coluna.</p>
+        <p>para agora ficarem um do lado do outro em formato de linha</p>
+
+   <br>
+
+    <div  class="container_display_flex"> 
+        <div class="exemplo">1</div>
+        <div class="exemplo">2</div>
+        <div class="exemplo">3</div>
+        <div class="exemplo">4</div>
+    </div> 
+
+    <br>
+    <h3> Configurando o container</h3>
+<p>Há algumas opções interessantes que podemos colocar no container para modificar a disposição dos elementos filhos (flex-itens).</p>
+<p>Dentro delas estão: </p>
+<br>
+
+<h4 id="flexdirection">FLEX-DIRETION</h4>
+
+<!-- Seção das flechas -->
+
+    <p>A propriedade flex-direction, como o nome sugere, vai definir o eixo do container e a direção dos flex-itens. Há 4 possíveis valores, veja :</p>
+
+<br>
+<h4>Row-reverse:</h4> <p>Os itens são organizados em forma exibição em linha da direita para a esquerda;</p>
+       
+<div class="flex_direction_row-reverse">
+    <div class="exemplo">1</div>
+    <div class="exemplo">2</div>
+    <div class="exemplo">3</div>
+    <div class="exemplo">4</div>  
+</div>
+  <br>
+
+  <h4>Row (padrão):</h4> <p>Os itens são organizados em forma de linha da esquerda para a direita; </p> 
+  
+  <div class="flex_direction_row">
+    <div class="exemplo">1</div>
+    <div class="exemplo">2</div>
+    <div class="exemplo">3</div>
+    <div class="exemplo">4</div>  
+</div>
+<br>
+<h4>Column-reverse:</h4> <p>Os itens são organizados em forma de colunas iniciando de baixo para cima.</p>
+<div class="flex_direction_colum_reverse">
+    <div class="exemplo">1</div>
+    <div class="exemplo">2</div>
+    <div class="exemplo">3</div>
+    <div class="exemplo">4</div>
+</div>
+<br>
+<h4>Column:</h4> <p>Os itens são organizados em forma de colunas iniciando de cima para baixo;</p>
+<div class="flex_direction_colum ">
+    <div class="exemplo">1</div>
+    <div class="exemplo">2</div>
+    <div class="exemplo">3</div>
+    <div class="exemplo">4</div>
 </div>
 
-<!-- (codigo dessa bagaca a baixo)table>(tr>th.propriedade+th.valor)+tr*3>td.propriedade+td.valor -->
-<table>
-    <caption>Valores Padrão das propriedades do FlexBox</caption>
-    <tr>
-        <th class="propriedade">propriedade</th>
-        <th class="valor">valor</th>
-    </tr>
-    <tr>
-        <td class="propriedade">flex-direction</td>
-        <td class="valor">row</td>
-    </tr>
-    <tr>
-        <td class="propriedade">justify-content</td>
-        <td class="valor">flex-start</td>
-    </tr>
-    <tr>
-        <td class="propriedade">align-content</td>
-        <td class="valor">flex-start</td>
-    </tr>
-</table>
-
-<h2>Flex-Direction</h2>
-
-<p class="Flex-Direction"></p>
-A propriedade flex-direction permite alterar a direção na qual os 
-elementos flex serão exibidos ao longo do eixo principal.
-Definindo a propriedade flex-direction como row-reverse (linha reversa),
-ainda teremos os elementos dispostos em uma linha, entretanto, as linhas inicial e final serão trocadas.
-<p>exemplo</p>
-
-<div class="container display-flex "> 
-    <div class="contido"></div>
-    <div class="contido"></div>
-    <div class="contido"></div>
-    <div class="contido"></div>
-    <div class="contido"></div>
-   </div>
+<h3 id="justcontent">Justify-content</h3>
 
 
+    <p>A propriedade justify-content define o alinhamento dos itens ao longo do eixo principal do container. A sintaxe e os valores possíveis para essa propriedade são apresentados a seguir:</p>
+<br>
+    <h4>Flex-start (padrão):</h4> <p>Os itens são alinhados a partir do início do eixo principal;</p>
+    
+    <div class="justify_content-flex-start ">
+        <div class="exemplo">1</div>
+        <div class="exemplo">2</div>
+        <div class="exemplo">3</div>
+        
+        
+    </div>
+<br>
+    <h4>Flex-end:</h4> <p>Os itens são alinhados a partir do fim do eixo principal;</p>
+    
+    <div class="justify_content-flex-end ">
+        <div class="exemplo">1</div>
+        <div class="exemplo">2</div>
+        <div class="exemplo">3</div>
+        
+        
+    </div>
+<br>
+<h4>Center:</h4><p>Os itens são alinhados ao centro do eixo principal;</p>
+<div class="justify_content-center ">
+    <div class="exemplo">1</div>
+    <div class="exemplo">2</div>
+    <div class="exemplo">3</div>
+    
+    
+</div>
+<br>
+<h4>Space-between:</h4> <p>O primeiro item é deslocado para o início do eixo principal, o último é deslocado para o final do eixo principal e os demais são distribuídos uniformemente entre eles;</p>
+<div class="justify_content-space-between ">
+    <div class="exemplo">1</div>
+    <div class="exemplo">2</div>
+    <div class="exemplo">3</div>
+</div>
+<br>
+<h4>Space-around:</h4> <p>Os itens são uniformemente distribuídos ao longo do eixo principal. Aqui, porém, são atribuídas margens iguais à esquerda e à direita (ou acima e abaixo, dependendo da direção do eixo principal). Por isso o primeiro e o último item não ficam “colados” nas bordas do container.</p>
+<div class="justify_content-space-around ">
+    <div class="exemplo">1</div>
+    <div class="exemplo">2</div>
+    <div class="exemplo">3</div>
+    
+</div>
+<br>
+<h4>Space-evenly:</h4> <p>Os ítens são distribuídos de forma que o espaçamento entre quaisquer dois itens da linha (incluindo entre os ítens e as bordas) seja igual.</p>
+<div class="justify_content-space-evenly ">
+    <div class="exemplo">1</div>
+    <div class="exemplo">2</div>
+    <div class="exemplo">3</div>
+</div>
+<br>
+<h3 id="Alignitems">Align-items </h3>
+<p> Essa propriedade define como os itens são distribuídos ao longo do eixo transversal do container. A sintaxe e os valores possíveis para essa propriedade são apresentados a seguir:</p>
 
-<h3>Justify-Content:</h3>
+<br>
+<h4>Stretch (padrão):</h4> <p>Os itens serão esticados para preencher toda a dimensão do eixo transversal (altura ou largura);</p>
 
-<p class= "descricao-propriedade">
-A propriedade justify-content pode ser usada para justificar o conteudo
-do elemento conteiner em seu eixo primario, ou seja, eixo x (row,
-row -reverse) ou eixo y (column, column-reverse)</p>
-<p>exemplo</p>
+     <div class="align-items">
+        <div class="exemplo2">1</div>
+        <div class="exemplo2">2</div>
+        <div class="exemplo2">3</div>
+        <div class="exemplo2">4</div>
+    </div> 
+<br>
+    <h4>flex-start:</h4> <p>Os itens são deslocadas para o início do eixo transversal;</p>
+    <div class="align-items-start">
+        <div class="exemplo3">1</div>
+        <div class="exemplo3">2</div>
+        <div class="exemplo3">3</div>
+        <div class="exemplo3">4</div>
+    </div> 
+    <br>
+    <h4>flex-end:</h4> <p>Os itens são deslocadas para o final do eixo transversal;</p>
+    <div class="align-items-end">
+        <div class="exemplo3">1</div>
+        <div class="exemplo3">2</div>
+        <div class="exemplo3">3</div>
+        <div class="exemplo3">4</div>
+    </div>
+<br>
+    <h4>Center:</h4> <p>Os itens são centralizados no eixo transversal;</p>
+    <div class="align-items-center">
+        <div class="exemplo3">1</div>
+        <div class="exemplo3">2</div>
+        <div class="exemplo3">3</div>
+        <div class="exemplo3">4</div>
+    </div>
+<br>
+<h4>Baseline:</h4><p> Os itens são alinhados a partir da base da primeira linha de texto de cada um.</p>
 
-<h4>Center</h4>
-<p class="descricao-propriedade">
-o valor "center vai alinhar o conteudo 
-ao centro do eixo primario."
-</p>
+<div class="align-items-baseline">
+    <div class="exemplo3">A</div>
+    <div class="exemplo3">B</div>
+    <div class="exemplo3">C</div>
+    <div class="exemplo3">D</div>
+</div>
+<br>
 
-<p class="exemplo"></p>
-<div class="container display-flex justify-content-center"> 
- <div class="contido"></div>
- <div class="contido"></div>
- <div class="contido"></div>
- <div class="contido"></div>
- <div class="contido"></div>
+<h4 id="flexwrap">Flex-wrap</h4>
+<p> Com a propriedade flex-wrap aplicada ao container podemos alterar esse comportamento, fazendo com que ocorra a “quebra de linha” nos itens.</p>
+ <br>
+<h4>Nowrap (padrão):</h4> <p>Todos os itens serão dispostos em uma linha;</p>
+<div class="flex-wrap_nowrap">
+    <div class="exemplo3">1</div>
+    <div class="exemplo3">2</div>
+    <div class="exemplo3">3</div>
+    <div class="exemplo3">4</div>
+</div>
+<br>
+<h4>Wrap:</h4> <p>Ocorrerá a quebra de linha e os itens mais à direita serão deslocados para a linha de baixo;</p>
+<div class="flex-wrap">
+    <div class="exemplo3">1</div>
+    <div class="exemplo3">2</div>
+    <div class="exemplo3">3</div>
+    <div class="exemplo3">4</div>
+</div>
+<br>
+<h4>Wrap-reverse:</h4> <p>Ocorrerá a quebra de linha e os itens mais à direita serão deslocados para a linha de cima;</p>
+<div class="flex-wrap_reverse">
+    <div class="exemplo3">1</div>
+    <div class="exemplo3">2</div>
+    <div class="exemplo3">3</div>
+    <div class="exemplo3">4</div>
 </div>
 
+<h3 id="flexflow" >Flex-flow</h3> 
+<p>A propriedade flex-flow é uma propriedade shorthand (uma mesma declaração inclui vários valores relacionados a mais de uma propriedade) que inclui flex-direction e flex-wrap.</p>
+<br>
+<p>Neste exemplo foi aplicado Flax Direction Colum (posiciona de cima para baixo) com Flex Wrap:Wrap (Separa em linhas)</p>
+<br>
+<div class="flex-flow" >
+    <div class="exemplo3">1</div>
+    <div class="exemplo3">2</div>
+    <div class="exemplo3">3</div>
+    <div class="exemplo3">4</div>
+    <div class="exemplo3">5</div>
+    <div class="exemplo3">6</div>
+</div>
 
+<br>
+<button><a href="#topo">INICIO</a></button>
 
-
-</body>
+</body >
 </html>
+
